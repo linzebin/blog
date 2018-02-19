@@ -4,13 +4,13 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 import Bio from '../components/Bio'
-import typography from '../utils/typography'
+// import typography from '../utils/typography'
 
 class BlogIndex extends React.Component<any, any> {
   render() {
     const siteTitle = this.props.data.site.siteMetadata.title;
     const posts = this.props.data.allMarkdownRemark.edges;
-    const { rhythm } = typography;
+    // const { rhythm } = typography;
     return (
       <div>
         <Helmet title={siteTitle} />
@@ -21,7 +21,7 @@ class BlogIndex extends React.Component<any, any> {
             <div key={node.fields.slug}>
               <h3
                 style={{
-                  marginBottom: rhythm(1 / 4),
+                  // marginBottom: rhythm(1 / 4),
                 }}
               >
                 <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>

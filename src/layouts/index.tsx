@@ -1,12 +1,12 @@
 import * as React from 'react'
 import Link from 'gatsby-link'
 import { Container } from 'react-responsive-grid'
-import typography from '../utils/typography'
+// import typography from '../utils/typography'
 
 class Template extends React.Component<any, any> {
   render() {
     const { location, children } = this.props
-    const { rhythm, scale } = typography;
+    // const { rhythm, scale } = typography;
 
     let header
 
@@ -19,8 +19,8 @@ class Template extends React.Component<any, any> {
       header = (
         <h1
           style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
+            // ...scale(1.5),
+            // marginBottom: rhythm(1.5),
             marginTop: 0,
           }}
         >
@@ -42,7 +42,7 @@ class Template extends React.Component<any, any> {
           style={{
             fontFamily: 'Montserrat, sans-serif',
             marginTop: 0,
-            marginBottom: rhythm(-1),
+            // marginBottom: rhythm(-1),
           }}
         >
           <Link
@@ -61,8 +61,8 @@ class Template extends React.Component<any, any> {
     return (
       <Container
         style={{
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          // maxWidth: rhythm(24),
+          // padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
         {header}

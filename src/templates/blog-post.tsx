@@ -4,16 +4,16 @@ import Link from 'gatsby-link'
 // import get from 'lodash/get'
 
 import Bio from '../components/Bio'
-import typography from '../utils/typography'
+// import typography from '../utils/typography'
 
-import 'prismjs/themes/prism-okaidia.css'
+// import 'prismjs/themes/prism-okaidia.css'
 
 class BlogPostTemplate extends React.Component<any, any> {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pathContext
-    const { rhythm, scale } = typography
+    // const { rhythm, scale } = typography
 
     return (
       <div>
@@ -21,10 +21,10 @@ class BlogPostTemplate extends React.Component<any, any> {
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
-            ...scale(-1 / 5),
+            // ...scale(-1 / 5),
             display: 'block',
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
+            // marginBottom: rhythm(1),
+            // marginTop: rhythm(-1),
           }}
         >
           {post.frontmatter.date}
@@ -32,7 +32,7 @@ class BlogPostTemplate extends React.Component<any, any> {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
-            marginBottom: rhythm(1),
+            // marginBottom: rhythm(1),
           }}
         />
         <Bio />
