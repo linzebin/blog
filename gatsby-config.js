@@ -3,7 +3,7 @@ module.exports = {
     title: '剑与魔法',
     author: '林泽斌',
     description: '次元壁垒即将打破',
-    siteUrl: 'https://linzebin.github.io/',
+    siteUrl: 'https://linzebin.github.io/blog/',
   },
   pathPrefix: '/blog',
   plugins: [

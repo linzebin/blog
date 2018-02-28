@@ -2,12 +2,13 @@ import * as React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import 'prismjs/themes/prism-tomorrow.css'
+import 'typeface-montserrat'
 
 class BlogIndexTemplate extends React.Component<any, any> {
   render() {
     const siteTitle = this.props.data.site.siteMetadata.title
     const posts = this.props.data.allMarkdownRemark.edges
-    const { previous, next } = this.props.pathContext
+    const { prev, next } = this.props.pathContext
 
     return (
       <section className="post-list">
@@ -26,6 +27,20 @@ class BlogIndexTemplate extends React.Component<any, any> {
             </article>
           )
         })}
+        <nav className="page-nav">
+          {prev && (
+            <a className="page-nav__prev" href={prev}>
+              <span className="iconfont icon-pre icon" />
+              <span className="text">Prev</span>
+            </a>
+          )}
+          {next && (
+            <a className="page-nav__next" href={next}>
+              <span className="text">Next</span>
+              <span className="iconfont icon-next icon" />
+            </a>
+          )}
+        </nav>
       </section>
     )
   }
@@ -34,7 +49,7 @@ class BlogIndexTemplate extends React.Component<any, any> {
 export default BlogIndexTemplate
 
 export const pageQuery = graphql`
-  query IndexQuery($skip: Int!) {
+  query IndexQuery($skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
@@ -42,7 +57,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       skip: $skip
-      limit: 10
+      limit: $limit
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {

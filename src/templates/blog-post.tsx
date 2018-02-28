@@ -1,7 +1,6 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
-import 'prismjs/themes/prism-tomorrow.css'
 
 class BlogPostTemplate extends React.Component<any, any> {
   render() {

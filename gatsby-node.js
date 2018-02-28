@@ -42,13 +42,19 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         const PAGE_SIZE = 2
         const total = Math.ceil(posts.length / PAGE_SIZE)
         for (let i = 1; i <= total; i++) {
+          const prev = i > 1 && (i === 2 ? '/' : `page/${i - 1}`);
+          const next = i < total && `page/${i + 1}`;
+
           createPage({
             path: i === 1 ? '/' : `page/${i}`,
             component: blogIndex,
             context: {
               current: i,
               skip: (i - 1) * PAGE_SIZE,
+              limit: PAGE_SIZE,
               total,
+              prev,
+              next,
             },
           })
         }
