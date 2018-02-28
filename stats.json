@@ -1,0 +1,68 @@
+{
+  "assetsByChunkName": {
+    "path---my-second-post": [
+      "path---my-second-post-748cb9f6a6ca04c2d678.js",
+      "path---my-second-post-748cb9f6a6ca04c2d678.js.map"
+    ],
+    "path---xindex": [
+      "path---xindex-840db49f068bacbba8f6.js",
+      "path---xindex-840db49f068bacbba8f6.js.map"
+    ],
+    "component---src-layouts-index-tsx": [
+      "component---src-layouts-index-tsx-a3cb8f5bb3b9128274e1.js",
+      "component---src-layouts-index-tsx-a3cb8f5bb3b9128274e1.js.map"
+    ],
+    "path---": [
+      "path----557518bd178906f8d58a.js",
+      "path----557518bd178906f8d58a.js.map"
+    ],
+    "component---src-templates-blog-index-tsx": [
+      "component---src-templates-blog-index-tsx-1a9f31c8ad8aaff2ac22.js",
+      "component---src-templates-blog-index-tsx-1a9f31c8ad8aaff2ac22.js.map"
+    ],
+    "component---node-modules-gatsby-plugin-offline-app-shell-js": [
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
+    ],
+    "path---hi-folks": [
+      "path---hi-folks-0ed0050ecba4315e7dc9.js",
+      "path---hi-folks-0ed0050ecba4315e7dc9.js.map"
+    ],
+    "path---page-2": [
+      "path---page-2-2e60e672c3352a52eb9e.js",
+      "path---page-2-2e60e672c3352a52eb9e.js.map"
+    ],
+    "path---index": [
+      "path---index-49f648ccf99c4d3aa67e.js",
+      "path---index-49f648ccf99c4d3aa67e.js.map"
+    ],
+    "path---hello-world": [
+      "path---hello-world-5842101a0b20497d1433.js",
+      "path---hello-world-5842101a0b20497d1433.js.map"
+    ],
+    "commons": [
+      "commons-273bcbdccebea25863f0.js",
+      "build-js-styles.css",
+      "commons-273bcbdccebea25863f0.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---offline-plugin-app-shell-fallback": [
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-templates-blog-post-tsx": [
+      "component---src-templates-blog-post-tsx-04e777acd80a164c2e55.js",
+      "component---src-templates-blog-post-tsx-04e777acd80a164c2e55.js.map"
+    ],
+    "app": [
+      "app-07d4efc9b13313e41737.js",
+      "build-js-styles.css",
+      "app-07d4efc9b13313e41737.js.map",
+      "build-js-styles.css.map"
+    ],
+    "component---src-pages-xindex-tsx": [
+      "component---src-pages-xindex-tsx-cb48b8a862b13c432565.js",
+      "component---src-pages-xindex-tsx-cb48b8a862b13c432565.js.map"
+    ]
+  }
+}
