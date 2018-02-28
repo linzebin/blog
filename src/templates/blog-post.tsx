@@ -1,41 +1,25 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
-// import get from 'lodash/get'
-
-import Bio from '../components/Bio'
-// import typography from '../utils/typography'
-
-// import 'prismjs/themes/prism-okaidia.css'
+import 'prismjs/themes/prism-tomorrow.css'
 
 class BlogPostTemplate extends React.Component<any, any> {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pathContext
-    // const { rhythm, scale } = typography
 
     return (
-      <div>
+      <section className="post">
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-        <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            // ...scale(-1 / 5),
-            display: 'block',
-            // marginBottom: rhythm(1),
-            // marginTop: rhythm(-1),
-          }}
-        >
-          {post.frontmatter.date}
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            // marginBottom: rhythm(1),
-          }}
+        <h1 className="post__title">{post.frontmatter.title}</h1>
+        <div className="post__time">{post.frontmatter.date}</div>
+        <div
+          className="post__content"
+          dangerouslySetInnerHTML={{ __html: post.html }}
         />
-        <Bio />
+
+        <hr />
 
         <ul
           style={{
@@ -43,7 +27,7 @@ class BlogPostTemplate extends React.Component<any, any> {
             flexWrap: 'wrap',
             justifyContent: 'space-between',
             listStyle: 'none',
-            padding: 0,
+            padding: '0 20px',
           }}
         >
           {previous && (
@@ -62,7 +46,7 @@ class BlogPostTemplate extends React.Component<any, any> {
             </li>
           )}
         </ul>
-      </div>
+      </section>
     )
   }
 }

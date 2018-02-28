@@ -1,0 +1,58 @@
+.site-header {
+  position: relative;
+  width: 100%;
+  border-top: 2px solid #000;
+  padding-bottom: 70px;
+  &__logo {
+    position: absolute;
+    width: 160px;
+    height: 82px;
+    top: 0;
+    left: 50%;
+    margin-left: -80px;
+    background: #000;
+    padding: 10px 0 12px 0;
+  }
+  &__title {
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.6;
+  }
+  &__desc {
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+  }
+}
+
+.site-nav-switch {
+  float: right;
+  margin-top: 20px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  i {
+    font-size: 30px;
+  }
+}
+
+.header-wrapper {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #e1e2e3;
+  padding: 0 20px;
+}
+
+.site-main {
+  position: relative;
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 30px;
+}

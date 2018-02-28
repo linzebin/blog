@@ -2,38 +2,33 @@ import * as React from 'react'
 import Link from 'gatsby-link'
 // import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import Header from '../components/Header'
 
-import Bio from '../components/Bio'
 // import typography from '../utils/typography'
 
 class BlogIndex extends React.Component<any, any> {
   render() {
-    const siteTitle = this.props.data.site.siteMetadata.title;
-    const posts = this.props.data.allMarkdownRemark.edges;
+    const siteTitle = this.props.data.site.siteMetadata.title
+    const posts = this.props.data.allMarkdownRemark.edges
     // const { rhythm } = typography;
     return (
-      <div>
+      <section className="post-list">
         <Helmet title={siteTitle} />
-        <Bio />
         {posts.map(({ node }: { node: any }) => {
-          const title = node.frontmatter.title || node.fields.slug;
+          const title = node.frontmatter.title || node.fields.slug
           return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  // marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                  {title}
-                </Link>
+            <article key={node.fields.slug} className="post">
+              <h3 className="post__title">
+                <Link to={node.fields.slug}>{title}</Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
+              <time className="post__time">{node.frontmatter.date}</time>
+              <section className="post__content">
+                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              </section>
+            </article>
           )
         })}
-      </div>
+      </section>
     )
   }
 }
@@ -41,7 +36,7 @@ class BlogIndex extends React.Component<any, any> {
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query IndexQuery2 {
     site {
       siteMetadata {
         title
@@ -55,7 +50,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMMM DD, YYYY")
             title
           }
         }

@@ -11,3 +11,13 @@ egg yolk will be less rich."?
 ([Wikipedia Link](http://en.wikipedia.org/wiki/Salted_duck_egg))
 
 Yeah, I didn't either.
+
+```javascript
+// require gulp dependencies
+var gulp = require('gulp');
+
+// declare a gulp task
+gulp.task('task_name', function() {
+  // task pipelines
+});
+```
