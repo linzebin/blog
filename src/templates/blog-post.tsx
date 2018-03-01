@@ -18,33 +18,26 @@ class BlogPostTemplate extends React.Component<any, any> {
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
 
-        <hr />
+        <hr style={{margin: '40px 0 20px', opacity: 0.3 }} />
 
-        <ul
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            listStyle: 'none',
-            padding: '0 20px',
-          }}
-        >
+        <nav className="page-nav">
           {previous && (
-            <li>
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            </li>
+            <Link
+              className="page-nav__prev"
+              to={previous.fields.slug}
+              rel="prev"
+            >
+              <span className="iconfont icon-pre icon" />
+              <span className="text">{previous.frontmatter.title}</span>
+            </Link>
           )}
-
           {next && (
-            <li>
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            </li>
+            <Link className="page-nav__next" to={next.fields.slug} rel="next">
+              <span className="text">{next.frontmatter.title}</span>
+              <span className="iconfont icon-next icon" />
+            </Link>
           )}
-        </ul>
+        </nav>
       </section>
     )
   }

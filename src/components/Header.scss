@@ -34,8 +34,15 @@
   border: 0;
   outline: none;
   cursor: pointer;
+  transition: all .24s ease;
   i {
     font-size: 30px;
+  }
+}
+
+.menu-open {
+  .site-nav-switch {
+    transform: rotate(90deg);
   }
 }
 
