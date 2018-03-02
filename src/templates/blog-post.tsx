@@ -1,6 +1,8 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
+import PostToc from '../components/PostToc'
+import SideBar from '../components/SideBar'
 
 class BlogPostTemplate extends React.Component<any, any> {
   render() {
@@ -10,23 +12,19 @@ class BlogPostTemplate extends React.Component<any, any> {
 
     return (
       <section className="post">
+        <SideBar>
+          <PostToc headings={post.headings} />
+        </SideBar>
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
         <h1 className="post__title">{post.frontmatter.title}</h1>
         <div className="post__time">{post.frontmatter.date}</div>
-        <div
-          className="post__content"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+        <div className="post__content" dangerouslySetInnerHTML={{ __html: post.html }} />
 
-        <hr style={{margin: '40px 0 20px', opacity: 0.3 }} />
+        <hr style={{ margin: '40px 0 20px', opacity: 0.3 }} />
 
         <nav className="page-nav">
           {previous && (
-            <Link
-              className="page-nav__prev"
-              to={previous.fields.slug}
-              rel="prev"
-            >
+            <Link className="page-nav__prev" to={previous.fields.slug} rel="prev">
               <span className="iconfont icon-pre icon" />
               <span className="text">{previous.frontmatter.title}</span>
             </Link>
@@ -59,6 +57,10 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+      }
+      headings {
+        value
+        depth
       }
     }
   }

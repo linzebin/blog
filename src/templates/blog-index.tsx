@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
+import SideBar from '../components/SideBar'
 import 'prismjs/themes/prism-tomorrow.css'
 import 'typeface-montserrat'
 
@@ -13,6 +14,7 @@ class BlogIndexTemplate extends React.Component<any, any> {
     return (
       <section className="post-list">
         <Helmet title={siteTitle} />
+        <SideBar />
         {posts.map(({ node }: { node: any }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -55,11 +57,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
-      skip: $skip
-      limit: $limit
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
+    allMarkdownRemark(skip: $skip, limit: $limit, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           html

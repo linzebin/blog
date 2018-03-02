@@ -1,15 +1,42 @@
 import * as React from 'react'
-import Link from 'gatsby-link'
 import * as ReactDOM from 'react-dom'
+import Link from 'gatsby-link'
+
+enum SideBarTabType {
+  INDEX,
+  BIO,
+}
 
 const portalContainer = document.getElementById('___gatsby')
 
-export default class SideBar extends React.Component<any, any> {
+export default class SideBar extends React.Component<any, { tabType: SideBarTabType }> {
+  _el: any
+  constructor(props: any) {
+    super(props)
+    this.state = { tabType: SideBarTabType.INDEX }
+  }
+
+  _changTab = () => {
+    this.setState(prevState => {
+      return {
+        tabType: prevState.tabType === SideBarTabType.INDEX ? SideBarTabType.BIO : SideBarTabType.INDEX,
+      }
+    })
+  }
+  
   render() {
-    const content = (
+    this._el = (
       <aside className="site-sidebar">
-        <div className="site-toc">{this.props.children}</div>
-        <div className="site-bio">
+        <div className="sidebar-switch">
+          <a onClick={this._changTab} className={`dark-btn${this.state.tabType === SideBarTabType.INDEX ? ' active' : ''}`}>
+            <span>Index</span>
+          </a>
+          <a onClick={this._changTab} className={`dark-btn${this.state.tabType === SideBarTabType.BIO ? ' active' : ''}`}>
+            <span>BIO</span>
+          </a>
+        </div>
+        <div className={`site-toc${this.state.tabType === SideBarTabType.INDEX ? ' show' : ''}`}>{this.props.children}</div>
+        <div className={`site-bio${this.state.tabType === SideBarTabType.BIO ? ' show' : ''}`}>
           <div className="about-me">
             <div className="avator">
               <img src="" alt="" />
@@ -39,7 +66,7 @@ export default class SideBar extends React.Component<any, any> {
       </aside>
     )
 
-    return ReactDOM.createPortal(content, portalContainer)
+    return portalContainer ? ReactDOM.createPortal(this._el, portalContainer) : null
   }
 }
 

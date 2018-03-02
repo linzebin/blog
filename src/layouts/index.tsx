@@ -2,7 +2,7 @@ import * as React from 'react'
 import Link from 'gatsby-link'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import SideBar, { changeSideBarVisible } from '../components/SideBar'
+import { changeSideBarVisible } from '../components/SideBar'
 
 import './normalize.css'
 import './iconfont.css'
@@ -32,7 +32,6 @@ class Template extends React.Component<any, any> {
           <main className="site-main">{children()}</main>
           <Footer />
         </div>
-        <SideBar />
       </React.Fragment>
     )
   }
