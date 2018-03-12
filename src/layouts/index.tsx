@@ -4,9 +4,9 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { changeSideBarVisible } from '../components/SideBar'
 
-import './normalize.css'
-import './iconfont.css'
-import './base.scss'
+import '../styles/normalize.css'
+import '../styles/iconfont.css'
+import '../styles/base.scss'
 
 class Template extends React.Component<any, any> {
   _onClick = () => {

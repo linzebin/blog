@@ -13,7 +13,7 @@ export default class SideBar extends React.Component<any, { tabType: SideBarTabT
   _el: any
   constructor(props: any) {
     super(props)
-    this.state = { tabType: SideBarTabType.INDEX }
+    this.state = { tabType: SideBarTabType.BIO }
   }
 
   _changTab = () => {
@@ -23,18 +23,21 @@ export default class SideBar extends React.Component<any, { tabType: SideBarTabT
       }
     })
   }
-  
+
   render() {
+    const showToc = this.props.children && this.props.children.props.headings.length > 0
     this._el = (
       <aside className="site-sidebar">
-        <div className="sidebar-switch">
-          <a onClick={this._changTab} className={`dark-btn${this.state.tabType === SideBarTabType.INDEX ? ' active' : ''}`}>
-            <span>Index</span>
-          </a>
-          <a onClick={this._changTab} className={`dark-btn${this.state.tabType === SideBarTabType.BIO ? ' active' : ''}`}>
-            <span>BIO</span>
-          </a>
-        </div>
+        {showToc && (
+          <div className="sidebar-switch">
+            <a onClick={this._changTab} className={`dark-btn${this.state.tabType === SideBarTabType.INDEX ? ' active' : ''}`}>
+              <span>Index</span>
+            </a>
+            <a onClick={this._changTab} className={`dark-btn${this.state.tabType === SideBarTabType.BIO ? ' active' : ''}`}>
+              <span>BIO</span>
+            </a>
+          </div>
+        )}
         <div className={`site-toc${this.state.tabType === SideBarTabType.INDEX ? ' show' : ''}`}>{this.props.children}</div>
         <div className={`site-bio${this.state.tabType === SideBarTabType.BIO ? ' show' : ''}`}>
           <div className="about-me">
@@ -57,6 +60,9 @@ export default class SideBar extends React.Component<any, { tabType: SideBarTabT
             </Link>
             <Link to="/archives" className="menu-item dark-btn">
               Archives
+            </Link>
+            <Link to="/album" className="menu-item dark-btn">
+              Album
             </Link>
             <Link to="/link" className="menu-item dark-btn">
               Link

@@ -13,10 +13,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       graphql(
         `
           {
-            allMarkdownRemark(
-              sort: { fields: [frontmatter___date], order: DESC }
-              limit: 1000
-            ) {
+            allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
               edges {
                 node {
                   fields {
@@ -39,11 +36,11 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         const posts = result.data.allMarkdownRemark.edges
 
         // 创建分页
-        const PAGE_SIZE = 2
+        const PAGE_SIZE = 10
         const total = Math.ceil(posts.length / PAGE_SIZE)
         for (let i = 1; i <= total; i++) {
-          const prev = i > 1 && (i === 2 ? '/' : `page/${i - 1}`);
-          const next = i < total && `page/${i + 1}`;
+          const prev = i > 1 && (i === 2 ? '/' : `page/${i - 1}`)
+          const next = i < total && `page/${i + 1}`
 
           createPage({
             path: i === 1 ? '/' : `page/${i}`,
@@ -60,9 +57,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
 
         // Create blog posts pages.
-        _.each(posts, (post, index) => {
-          const previous =
-            index === posts.length - 1 ? false : posts[index + 1].node
+        posts.forEach((post, index) => {
+          const previous = index === posts.length - 1 ? false : posts[index + 1].node
           const next = index === 0 ? false : posts[index - 1].node
 
           createPage({

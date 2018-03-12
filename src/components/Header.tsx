@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Link from 'gatsby-link'
 
-import './Header.scss'
+import '../styles/Header.scss'
 import { changeSideBarVisible } from './SideBar'
 
 export default class Header extends React.Component<any, any> {

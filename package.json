@@ -47,7 +47,6 @@
     "gatsby-source-filesystem": "^1.5.20",
     "gatsby-transformer-remark": "^1.7.32",
     "gatsby-transformer-sharp": "^1.6.19",
-    "lodash": "^4.17.5",
     "typeface-lato": "^0.0.54",
     "typeface-montserrat": "^0.0.54"
   },
