@@ -1,0 +1,2 @@
+webpackJsonp([8002114389387],{261:function(t,e){t.exports={data:{site:{siteMetadata:{title:"剑与魔法"}},allMarkdownRemark:{edges:[{node:{excerpt:"先来明确几个问题 Q1: 什么是继承 A1: 继承（英语：inheritance）是面向对象软件技术当中的一个概念。如果一个类别A“继承自”另一个类别B，就把这个A称为“B的子类别”，而把B称为“A的父类别”也可以称“B是A…",fields:{slug:"/typescript-extends/"},frontmatter:{date:"March 16, 2018",title:"TypeScript实现继承的方式"}}},{node:{excerpt:"剑与魔法(我的博客)创建于2018，记录自己成长的点点滴滴",fields:{slug:"/about/"},frontmatter:{date:"February 28, 2018",title:"关于 「剑与魔法」"}}}]}},pathContext:{}}}});
+//# sourceMappingURL=path---xindex-79e6a3313ccce7d9e128.js.map
