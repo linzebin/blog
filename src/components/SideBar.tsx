@@ -7,10 +7,16 @@ enum SideBarTabType {
   BIO,
 }
 
-const portalContainer = document.getElementById('___gatsby')
-
 export default class SideBar extends React.Component<any, { tabType: SideBarTabType }> {
   _el: any
+  portalContainer: any
+
+  componentDidMount() {
+    if (typeof window !== 'undefined') {
+      this.portalContainer = document.getElementById('___gatsby')
+    }
+  }
+
   constructor(props: any) {
     super(props)
     this.state = { tabType: SideBarTabType.BIO }
@@ -72,7 +78,7 @@ export default class SideBar extends React.Component<any, { tabType: SideBarTabT
       </aside>
     )
 
-    return portalContainer ? ReactDOM.createPortal(this._el, portalContainer) : null
+    return this.portalContainer ? ReactDOM.createPortal(this._el, this.portalContainer) : null
   }
 }
 

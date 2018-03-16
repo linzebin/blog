@@ -9,6 +9,7 @@ import '../styles/iconfont.css'
 import '../styles/base.scss'
 
 class Template extends React.Component<any, any> {
+  
   _onClick = () => {
     changeSideBarVisible()
   }
@@ -23,7 +24,6 @@ class Template extends React.Component<any, any> {
       rootPath = __PATH_PREFIX__ + `/`
     }
 
-    const portalContainer = document.body
     return (
       <React.Fragment>
         <div className="site-wrapper">

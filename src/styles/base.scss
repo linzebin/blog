@@ -94,16 +94,30 @@ h6 {
         h6 {
             position: relative;
             margin: 40px auto 30px auto;
-            left: 20px;
+            // left: 20px;
             &:before {
                 position: absolute;
-                left: -20px;
+                left: -1em;
                 top: 0;
                 content: '#';
                 color: #4caf50;
                 font-weight: 400;
             }
+            svg {
+                display: none;
+            }
         }
+    }
+}
+
+
+//markdown-style
+.post__content {
+    p {
+        margin: 0.8em 0;
+    }
+    ol li {
+        margin-left: 1em;
     }
 }
 
