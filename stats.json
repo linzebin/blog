@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "path---xindex": [
-      "path---xindex-79e6a3313ccce7d9e128.js",
-      "path---xindex-79e6a3313ccce7d9e128.js.map"
+      "path---xindex-054c43feb7caa25cd3ef.js",
+      "path---xindex-054c43feb7caa25cd3ef.js.map"
     ],
     "component---src-layouts-index-tsx": [
       "component---src-layouts-index-tsx-a01cbf2524f0266b5702.js",
@@ -21,8 +21,8 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "path---index": [
-      "path---index-9469e1e451382ccf2f02.js",
-      "path---index-9469e1e451382ccf2f02.js.map"
+      "path---index-bf88c913795c5e7bb608.js",
+      "path---index-bf88c913795c5e7bb608.js.map"
     ],
     "commons": [
       "commons-91a89cb93085ee5cde03.js",
@@ -31,8 +31,8 @@
       "build-js-styles.css.map"
     ],
     "path---typescript-extends": [
-      "path---typescript-extends-aac6c7b1170f8d4aa401.js",
-      "path---typescript-extends-aac6c7b1170f8d4aa401.js.map"
+      "path---typescript-extends-a9761b6318927bd2073a.js",
+      "path---typescript-extends-a9761b6318927bd2073a.js.map"
     ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
@@ -43,14 +43,18 @@
       "component---src-templates-blog-post-tsx-229b8bcd4e46ed41e52b.js.map"
     ],
     "app": [
-      "app-8bdb52c56f17d811ef31.js",
+      "app-85ff95bc375185b928a9.js",
       "build-js-styles.css",
-      "app-8bdb52c56f17d811ef31.js.map",
+      "app-85ff95bc375185b928a9.js.map",
       "build-js-styles.css.map"
     ],
     "component---src-pages-xindex-tsx": [
       "component---src-pages-xindex-tsx-6c0b51a384e762005007.js",
       "component---src-pages-xindex-tsx-6c0b51a384e762005007.js.map"
+    ],
+    "path---debug-gulp-task-in-vscode": [
+      "path---debug-gulp-task-in-vscode-77849816f8557c0e97b1.js",
+      "path---debug-gulp-task-in-vscode-77849816f8557c0e97b1.js.map"
     ],
     "path---about": [
       "path---about-270ba5011cc502fe7b13.js",
