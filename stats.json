@@ -1,9 +1,5 @@
 {
   "assetsByChunkName": {
-    "path---xindex": [
-      "path---xindex-054c43feb7caa25cd3ef.js",
-      "path---xindex-054c43feb7caa25cd3ef.js.map"
-    ],
     "component---src-layouts-index-tsx": [
       "component---src-layouts-index-tsx-a01cbf2524f0266b5702.js",
       "component---src-layouts-index-tsx-a01cbf2524f0266b5702.js.map"
@@ -13,21 +9,21 @@
       "path----557518bd178906f8d58a.js.map"
     ],
     "component---src-templates-blog-index-tsx": [
-      "component---src-templates-blog-index-tsx-44bbb29e61957f4f7e25.js",
-      "component---src-templates-blog-index-tsx-44bbb29e61957f4f7e25.js.map"
+      "component---src-templates-blog-index-tsx-4155f67514d026e736b9.js",
+      "component---src-templates-blog-index-tsx-4155f67514d026e736b9.js.map"
     ],
     "component---node-modules-gatsby-plugin-offline-app-shell-js": [
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "path---index": [
-      "path---index-bf88c913795c5e7bb608.js",
-      "path---index-bf88c913795c5e7bb608.js.map"
+      "path---index-a49e3952166e8518c60f.js",
+      "path---index-a49e3952166e8518c60f.js.map"
     ],
     "commons": [
-      "commons-91a89cb93085ee5cde03.js",
+      "commons-4f73ce677b1efe7ef3f1.js",
       "build-js-styles.css",
-      "commons-91a89cb93085ee5cde03.js.map",
+      "commons-4f73ce677b1efe7ef3f1.js.map",
       "build-js-styles.css.map"
     ],
     "path---typescript-extends": [
@@ -39,22 +35,18 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-templates-blog-post-tsx": [
-      "component---src-templates-blog-post-tsx-229b8bcd4e46ed41e52b.js",
-      "component---src-templates-blog-post-tsx-229b8bcd4e46ed41e52b.js.map"
+      "component---src-templates-blog-post-tsx-cb91c5bde3e2883d5fb5.js",
+      "component---src-templates-blog-post-tsx-cb91c5bde3e2883d5fb5.js.map"
     ],
     "app": [
-      "app-85ff95bc375185b928a9.js",
+      "app-772ee7bd4f2530da85e2.js",
       "build-js-styles.css",
-      "app-85ff95bc375185b928a9.js.map",
+      "app-772ee7bd4f2530da85e2.js.map",
       "build-js-styles.css.map"
     ],
-    "component---src-pages-xindex-tsx": [
-      "component---src-pages-xindex-tsx-6c0b51a384e762005007.js",
-      "component---src-pages-xindex-tsx-6c0b51a384e762005007.js.map"
-    ],
     "path---debug-gulp-task-in-vscode": [
-      "path---debug-gulp-task-in-vscode-77849816f8557c0e97b1.js",
-      "path---debug-gulp-task-in-vscode-77849816f8557c0e97b1.js.map"
+      "path---debug-gulp-task-in-vscode-ba1d43fed4d916dd6a7a.js",
+      "path---debug-gulp-task-in-vscode-ba1d43fed4d916dd6a7a.js.map"
     ],
     "path---about": [
       "path---about-270ba5011cc502fe7b13.js",
