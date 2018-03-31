@@ -2,7 +2,7 @@ import * as React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import SideBar from '../components/SideBar'
-import 'prismjs/themes/prism-tomorrow.css'
+import '../styles/prism-darcula.css'
 import 'typeface-montserrat'
 
 class BlogIndexTemplate extends React.Component<any, any> {
