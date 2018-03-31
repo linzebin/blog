@@ -11,7 +11,7 @@ export default class SideBar extends React.Component<any, { tabType: SideBarTabT
   _el: any
   portalContainer: any
 
-  componentDidMount() {
+  componentWillMount() {
     if (typeof window !== 'undefined') {
       this.portalContainer = document.getElementById('___gatsby')
     }
@@ -31,6 +31,9 @@ export default class SideBar extends React.Component<any, { tabType: SideBarTabT
   }
 
   render() {
+    if (typeof window !== 'undefined') {
+      this.portalContainer = document.getElementById('___gatsby')
+    }
     const showToc = this.props.children && this.props.children.props.headings.length > 0
     this._el = (
       <aside className="site-sidebar">
